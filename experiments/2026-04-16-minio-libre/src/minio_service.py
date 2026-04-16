@@ -17,13 +17,12 @@ class MinioService():
             print(f"ℹ️ Bucket '{bucket_name}' already exists.")
 
 
-    async def upload_file(self, bucket_name: str, file_path: Path):
+    async def upload_file(self, bucket_name: str, file_path: Path, object_name: str = None):
         if not file_path.exists():
             print(f"❌ Error: Local file {file_path} does not exist.")
             return
 
-        # Use .name to get 'test.txt' instead of 'files/test.txt'
-        object_name = file_path.name
+        object_name = object_name if object_name else file_path.name
 
         await self._minio_client.fput_object(
             bucket_name=bucket_name,

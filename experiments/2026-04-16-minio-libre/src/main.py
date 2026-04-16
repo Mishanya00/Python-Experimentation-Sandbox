@@ -3,13 +3,15 @@ import asyncio
 from minio_config import minio_client
 
 from scenarios import (
-    download_template_to_ram
+    convert_docx_to_pdf,
+    convert_docx_to_pdf2,
 )
 
 
 async def main():
+
     try:
-        print(await download_template_to_ram())
+        await convert_docx_to_pdf2()
     finally:
         await minio_client.close_session()
 
