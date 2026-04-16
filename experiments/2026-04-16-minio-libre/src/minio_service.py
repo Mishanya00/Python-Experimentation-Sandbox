@@ -1,4 +1,6 @@
 from pathlib import Path
+from io import BytesIO
+
 from miniopy_async import Minio
 
 
@@ -38,6 +40,15 @@ class MinioService():
             file_path=str(download_path),
         )
         print(f"📥 Downloaded '{object_name}' to {download_path}.")
+
+
+    async def download_to_ram(self, bucket_name: str, object_name: str):
+        object = await self._minio_client.get_object(
+            bucket_name=bucket_name,
+            object_name=object_name,
+        )
+
+        return BytesIO(await object.content.read())
 
 
     async def list_buckets(self):
