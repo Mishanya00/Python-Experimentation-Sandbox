@@ -11,6 +11,7 @@ members = [
     "2026-04-16-minio-libre",
     "2026-04-22-gotenberg-benchmark",
     "python-experimentation-sandbox",
+    "scripts",
 ]
 
 [[package]]
@@ -874,6 +875,17 @@ wheels = [
 name = "python-experimentation-sandbox"
 version = "0.1.0"
 source = { virtual = "." }
+
+[[package]]
+name = "scripts"
+version = "0.1.0"
+source = { virtual = "scripts" }
+dependencies = [
+    { name = "python-docx" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "python-docx", specifier = ">=1.2.0" }]
 
 [[package]]
 name = "typing-extensions"

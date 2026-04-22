@@ -9,4 +9,5 @@ dependencies = []
 members = [
     "experiments/2026-04-16-minio-libre",
     "experiments/2026-04-22-gotenberg-benchmark",
+    "scripts",
 ]

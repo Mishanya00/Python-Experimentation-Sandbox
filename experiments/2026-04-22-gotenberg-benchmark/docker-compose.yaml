@@ -13,3 +13,9 @@ services:
     image: gotenberg/gotenberg:8
     ports:
       - "3000:3000"
+    command:
+      - "gotenberg"
+      - "--api-timeout=60s"
+      - "--libreoffice-restart-after=50"
+      - "--libreoffice-start-timeout=20s"
+      - "--libreoffice-auto-start=true"
