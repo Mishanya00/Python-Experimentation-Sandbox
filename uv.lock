@@ -10,6 +10,7 @@ resolution-markers = [
 members = [
     "2026-04-16-minio-libre",
     "2026-04-22-gotenberg-benchmark",
+    "2026-04-22-gotenberg-merge-pdf",
     "python-experimentation-sandbox",
     "scripts",
 ]
@@ -35,6 +36,25 @@ requires-dist = [
 name = "2026-04-22-gotenberg-benchmark"
 version = "0.1.0"
 source = { virtual = "experiments/2026-04-22-gotenberg-benchmark" }
+dependencies = [
+    { name = "docxtpl" },
+    { name = "httpx" },
+    { name = "minio" },
+    { name = "miniopy-async" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "docxtpl", specifier = ">=0.20.2" },
+    { name = "httpx", specifier = ">=0.28.1" },
+    { name = "minio", specifier = ">=7.2.20" },
+    { name = "miniopy-async", specifier = ">=1.23.5" },
+]
+
+[[package]]
+name = "2026-04-22-gotenberg-merge-pdf"
+version = "0.1.0"
+source = { virtual = "experiments/2026-04-23-gotenberg-merge-pdf" }
 dependencies = [
     { name = "docxtpl" },
     { name = "httpx" },

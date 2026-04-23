@@ -1,0 +1,21 @@
+services:
+  minio:
+    image: minio/minio
+    ports:
+      - "9010:9000" # API
+      - "9011:9001" # Web UI
+    environment:
+      MINIO_ROOT_USER: admin
+      MINIO_ROOT_PASSWORD: password
+    command: server /data --console-address ":9001"
+
+  gotenberg:
+    image: gotenberg/gotenberg:8-libreoffice
+    ports:
+      - "3000:3000"
+    command:
+      - "gotenberg"
+      - "--api-timeout=60s"
+      - "--libreoffice-restart-after=50"
+      - "--libreoffice-start-timeout=20s"
+      - "--libreoffice-auto-start=true"
