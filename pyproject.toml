@@ -12,4 +12,5 @@ members = [
     "experiments/2026-04-23-gotenberg-merge-pdf",
     "scripts",
     "experiments/2026-05-14-pwdlib-bcrypt-hashing",
+    "experiments/2026-05-22-playwright-shared-browser-info",
 ]
