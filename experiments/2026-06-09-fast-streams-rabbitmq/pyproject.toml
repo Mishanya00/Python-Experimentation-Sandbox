@@ -1,0 +1,9 @@
+[project]
+name = "2026-06-09-fast-streams-rabbitmq"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14.3"
+dependencies = [
+    "faststream[cli,rabbit]>=0.7.1",
+]

@@ -1,0 +1,25 @@
+services:
+  faststreams-rabbitmq:
+    container_name: ${PREFIX:-}rabbitmq
+    image: rabbitmq:4.2.1-management-alpine
+    restart: always
+    environment:
+      - RABBITMQ_DEFAULT_USER=rabbitmq
+      - RABBITMQ_DEFAULT_PASS=rabbitmq
+    ports:
+      - "5672:5672"     # ← ADD THIS: AMQP protocol port
+      - "15672:15672"   # management UI
+    volumes:
+      - data-rabbit:/var/lib/rabbit
+      - data-rabbit-log:/var/log/rabbit
+    healthcheck:
+      test: ["CMD-SHELL", "rabbitmq-diagnostics check_port_listener 15672"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 3m
+      start_interval: 5s
+
+volumes:
+  data-rabbit: null
+  data-rabbit-log: null

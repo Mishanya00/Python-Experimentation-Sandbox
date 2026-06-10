@@ -13,4 +13,5 @@ members = [
     "scripts",
     "experiments/2026-05-14-pwdlib-bcrypt-hashing",
     "experiments/2026-05-22-playwright-shared-browser-info",
+    "experiments/2026-06-09-fast-streams-rabbitmq",
 ]
