@@ -6,7 +6,9 @@ from faststream import FastStream
 from faststream.rabbit import RabbitBroker
 
 
-broker = RabbitBroker("amqp://rabbitmq:rabbitmq@localhost:5673/")
+rabbit_url = "amqp://rabbitmq:rabbitmq@localhost:5673/"
+
+broker = RabbitBroker(rabbit_url)
 app = FastStream(broker)
 
 
