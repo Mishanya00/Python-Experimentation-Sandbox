@@ -7,8 +7,8 @@ services:
       - RABBITMQ_DEFAULT_USER=rabbitmq
       - RABBITMQ_DEFAULT_PASS=rabbitmq
     ports:
-      - "5672:5672"     # ← ADD THIS: AMQP protocol port
-      - "15672:15672"   # management UI
+      - "5673:5672"     # ← ADD THIS: AMQP protocol port
+      - "15673:15672"   # management UI
     volumes:
       - data-rabbit:/var/lib/rabbit
       - data-rabbit-log:/var/log/rabbit
