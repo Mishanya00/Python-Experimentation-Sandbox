@@ -1,0 +1,9 @@
+[project]
+name = "2026-06-18-smtp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14.3"
+dependencies = [
+    "fastapi[standard]>=0.137.2",
+]
