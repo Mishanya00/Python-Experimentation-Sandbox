@@ -15,4 +15,5 @@ members = [
     "experiments/2026-05-22-playwright-shared-browser-info",
     "experiments/2026-06-09-fast-streams-rabbitmq",
     "experiments/2026-06-18-smtp",
+    "experiments/2026-06-26-mongo",
 ]
