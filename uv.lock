@@ -1357,6 +1357,7 @@ name = "scripts"
 version = "0.1.0"
 source = { virtual = "scripts" }
 dependencies = [
+    { name = "aio-pika" },
     { name = "pwdlib", extra = ["argon2", "bcrypt"] },
     { name = "pyjwt" },
     { name = "qrcode", extra = ["pil"] },
@@ -1366,6 +1367,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "aio-pika", specifier = ">=9.6.2" },
     { name = "pwdlib", extras = ["argon2", "bcrypt"], specifier = ">=0.3.0" },
     { name = "pyjwt", specifier = ">=2.13.0" },
     { name = "qrcode", extras = ["pil"], specifier = ">=8.2" },

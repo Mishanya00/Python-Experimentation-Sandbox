@@ -5,6 +5,7 @@ description = "Venv for scripts"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "aio-pika>=9.6.2",
     "pwdlib[argon2,bcrypt]>=0.3.0",
     "pyjwt>=2.13.0",
     "qrcode-artistic>=3.0.2",
