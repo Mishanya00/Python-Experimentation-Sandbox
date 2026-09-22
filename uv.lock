@@ -11,6 +11,7 @@ members = [
     "2026-05-22-playwright-shared-browser-info",
     "2026-06-09-fast-streams-rabbitmq",
     "2026-06-18-smtp",
+    "2026-06-26-mongo",
     "python-experimentation-sandbox",
     "scripts",
 ]
@@ -113,6 +114,11 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [{ name = "fastapi", extras = ["standard"], specifier = ">=0.137.2" }]
+
+[[package]]
+name = "2026-06-26-mongo"
+version = "0.1.0"
+source = { virtual = "experiments/2026-06-26-mongo" }
 
 [[package]]
 name = "aio-pika"
