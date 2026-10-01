@@ -16,4 +16,5 @@ members = [
     "experiments/2026-06-09-fast-streams-rabbitmq",
     "experiments/2026-06-18-smtp",
     "experiments/2026-06-26-mongo",
+    "experiments/2026-10-01-fastapi-websockets",
 ]

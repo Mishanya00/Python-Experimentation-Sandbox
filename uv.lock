@@ -12,6 +12,7 @@ members = [
     "2026-06-09-fast-streams-rabbitmq",
     "2026-06-18-smtp",
     "2026-06-26-mongo",
+    "2026-10-01-fastapi-websockets",
     "python-experimentation-sandbox",
     "scripts",
 ]
@@ -119,6 +120,21 @@ requires-dist = [{ name = "fastapi", extras = ["standard"], specifier = ">=0.137
 name = "2026-06-26-mongo"
 version = "0.1.0"
 source = { virtual = "experiments/2026-06-26-mongo" }
+
+[[package]]
+name = "2026-10-01-fastapi-websockets"
+version = "0.1.0"
+source = { virtual = "experiments/2026-10-01-fastapi-websockets" }
+dependencies = [
+    { name = "fastapi", extra = ["standard"] },
+    { name = "websockets" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "fastapi", extras = ["standard"], specifier = ">=0.137.2" },
+    { name = "websockets", specifier = ">=16.0" },
+]
 
 [[package]]
 name = "aio-pika"
